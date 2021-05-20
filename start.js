@@ -1,44 +1,44 @@
 class Publication {
     identifier;
-    authors;
-    name;
+    author;
+    title;
     content;
     created;
-    constructor(id, authors, name, content = []) {
+    constructor(id = null, author = null, title = null, content = null) {
         this.identifier = id;
-        this.authors = authors;
-        this.title = name;
+        this.author = author;
+        this.title = title;
         this.content = content;
         this.created = new Date();
     }
 
     describe() {
-        console.log(`Publication number ${this.identifier} is  " ${this.title}" by ${this.authors}`);
+        console.log(`Publication number ${this.identifier} is  " ${this.title}" by ${this.author}`);
     }
 }
 
 class Blogpost extends Publication {
     edited;
     address;
-    constructor(id, authors, name, content = [], edited, address) {
-        super(id, authors, name, content = []);
+    constructor(id, author, title, content, edited, address) {
+        super(id, author, title, content);
         this.edited = edited;
         this.address = address;
     }
 }
 
 class Book extends Publication {
-    ISBN;
-    constructor(id, authors, name, content = [], ISBN) {
-        super(id, authors, name, content = []);
+    isbn;
+    constructor(id, author, title, content, ISBN) {
+        super(id, author, title, content);
         this.isbn = ISBN;
     }
 }
 
 class Score extends Publication {
     score;
-    constructor(id, authors, name, content = [], score) {
-        super(id, authors, name, content = []);
+    constructor(id, author, title, content, score) {
+        super(id, author, title, content);
         this.score = score;
     }
 }
@@ -62,3 +62,5 @@ book3.describe();
 
 const score1 = new Score(101, "blabla", "blubu", "bliblop", 100)
 score1.describe();
+
+console.log(blog1);

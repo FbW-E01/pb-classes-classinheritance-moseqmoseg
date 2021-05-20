@@ -8,7 +8,7 @@
     - All publications need a content field
     - All publications need a created field
     - When a publication is created, save the current date into the created field
-    - All other fields are null by default
+    - All other fields are "null" by default
     - All publications need a method that prints out their description (id, name, authors)
 
 2. Create a class called "Blogpost" that is a child of Publication
