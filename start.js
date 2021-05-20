@@ -28,10 +28,10 @@ class Blogpost extends Publication {
 }
 
 class Book extends Publication {
-    isbn;
+    ISBN;
     constructor(id, author, title, content, ISBN) {
         super(id, author, title, content);
-        this.isbn = ISBN;
+        this.ISBN = ISBN;
     }
 }
 
@@ -63,4 +63,3 @@ book3.describe();
 const score1 = new Score(101, "blabla", "blubu", "bliblop", 100)
 score1.describe();
 
-console.log(blog1);
